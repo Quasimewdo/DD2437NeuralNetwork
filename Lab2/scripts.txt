@@ -1,0 +1,28 @@
+In this part, the first task is to reorder different species of animals
+each animal is characterized by 84 attributes meaning the input space is 84
+hidden node is set to 100 as specified meanning we are placing a one-dimensional curve in the 84-dimenstion space
+learning rate is fixed to 0.2 for both winner node and neighbor nodes we have tried to set a smaller learning rate for neighbor nodes
+which yields different results than the one we show here but the difference is subtle.
+Here the results we can see an obvious division between three groups
+that insects are grouped together. 
+E.g. from beetle to spider. And animals living in both water and on land are also group together. 
+E.g. from duck to walrus. Finally, four-legged mammals such as dogs, cats, horses, and so on are grouped together.
+When the learning rate is different for neghbor nodes, the order of animals within each group is slightly different
+but overall, the three groups remain the same
+
+In the second task, we are again using SOM.  Different from last task, the hidden nodes are arranged in a 2d plane.
+And the difference in training is how we define the neighborhood. 
+This time the neighbourhood is circular and the suggested range is initially from 2 to 1 and finally to 0.
+If we set the epoch to 20, as shown in the plot, it is still far from real data points. When it's 30th epoch,
+it close but not perfect. Evetually we set it to 50 to get a more perfect match.
+
+Finaly task is to use SOM to analyze how different factors affect how parliment members votes.
+In first plot,Red represents women and blue represents men. The color for each node is proportional to the percentage of a different gender. The more red, the more women. The more blue,  the more men. A perfect purple shows that it has equal numbers of women and men. 
+The diameter of the circle is proportional to the number of that particular node among 100 hidden nodes.
+As shown here the biggest cluster has 50% of women which suggest gender doesn't affect how people votes.
+In second plot,percentage is the dominant party’s percentage for that particular node
+The diameter is also proportional to the number of that particular node among 100 hidden nodes
+Compared with the previous plot, the data points are better clustered. Most people in the same cluster are of the same party.
+The third plot, due to big number of different district, we don't use different color for it
+but the number for each node is how many different dictrict this node has. As shown in the plot, the biggest cluster
+has 28 different districts and the total number of districts is 29 so we can conclude that district has nothing to do with the vote either
